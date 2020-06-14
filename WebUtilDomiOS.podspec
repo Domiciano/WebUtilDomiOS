@@ -10,13 +10,11 @@ Pod::Spec.new do |s|
   s.name             = 'WebUtilDomiOS'
   s.version          = '0.1.0'
   s.summary          = 'HTTP Library easy to use'
-
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
 'HTTP Library easy to use. If you need consume a WebService using JSON you must to use WebUtilDomiOS'
                        DESC
