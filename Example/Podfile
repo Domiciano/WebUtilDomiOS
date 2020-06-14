@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'WebUtilDomiOS_Example' do
+  pod 'WebUtilDomiOS', :path => '../'
+
+  target 'WebUtilDomiOS_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
