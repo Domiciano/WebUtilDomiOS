@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebUtilDomiOS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        WebUtilDomi.create()
+            .toURL(url: "https://www.google.com")
+            .withMethod(method: "GET")
+            .withWorkerEndAction{ response in
+                print(response)
+            }
+            .withUIEndAction { response in
+                print("GUI Thread")
+                //let alert = UIAlertController(title: "Alert", message: response, preferredStyle: UIAlertController.Style.alert)
+                //application.present(alert, animated: true, completion: nil)
+                
+        }.execute()
+        
         return true
     }
 
