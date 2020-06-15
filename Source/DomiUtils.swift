@@ -53,5 +53,4 @@ public class DomiUtils{
         let str = String(decoding: data, as: UTF8.self)
         return str
     }
-    
 }

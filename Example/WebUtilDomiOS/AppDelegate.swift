@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("GUI Thread")
                 //let alert = UIAlertController(title: "Alert", message: response, preferredStyle: UIAlertController.Style.alert)
                 //application.present(alert, animated: true, completion: nil)
-                
         }.execute()
         
         return true
