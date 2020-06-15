@@ -10,17 +10,14 @@ import Foundation
 
 
 public class DomiUtils{
-    
     public static func data2str(data:Data) -> String{
         let str = String(decoding: data, as: UTF8.self)
         return str
     }
-    
     public static func str2data(json:String) -> Data{
         let data = json.data(using: .utf8)
         return data!
     }
-    
     public static func fromJson<T:Decodable>(data:Data, class:T.Type) -> T? {
         do{
             let decoderdec = JSONDecoder()
@@ -31,7 +28,6 @@ public class DomiUtils{
             return nil
         }
     }
-    
     public static func fromJson<T:Decodable>(json:String, class:T.Type) -> T? {
         do{
             let data = json.data(using: .utf8)
@@ -43,7 +39,6 @@ public class DomiUtils{
             return nil
         }
     }
-    
     public static func toJson <T:Encodable> (object : T) -> String {
         let encoderdec = JSONEncoder()
         do{
@@ -54,7 +49,6 @@ public class DomiUtils{
             return "{}"
         }
     }
-
     public static func toJson(data:Data) -> String{
         let str = String(decoding: data, as: UTF8.self)
         return str
